@@ -32,9 +32,9 @@ var copayApp = window.copayApp = angular.module('copayApp',[
   'copayApp.services',
 ]);
 
-angular.module('ngClipboard').config(function(ngClipProvider) {
+angular.module('ngClipboard').config(['ngClipProvider', function(ngClipProvider) {
   ngClipProvider.setPath("/lib/zeroclipboard/ZeroClipboard.swf");
-});
+}]);
 
 angular.module('copayApp.filters', []);
 angular.module('copayApp.controllers', []);
